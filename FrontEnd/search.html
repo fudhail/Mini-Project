@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Job Application Assistant - Browse Jobs</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .navbar {
+            background-color: #5A67D8;
+        }
+
+        .navbar-brand {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+        .navbar-brand:hover {
+            color: white;
+        }
+
+        .search-bar {
+            padding: 1.5rem 0;
+        }
+
+        .search-bar input {
+            border: 1px solid #ced4da;
+            padding: 1rem;
+            font-size: 1rem;
+        }
+
+        .btn-search {
+            background-color: #5A67D8;
+            color: white;
+            padding: 0.8rem 1.2rem;
+            font-size: 1rem;
+        }
+
+        .btn-search:hover {
+            background-color: #4c5dc7;
+        }
+
+        .job-card {
+            background-color: white;
+            padding: 1.5rem;
+            border: 1px solid #dee2e6;
+            border-radius: 0.5rem;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .job-title {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .job-company {
+            font-size: 1.2rem;
+            color: #6c757d;
+        }
+
+        .job-location {
+            font-size: 1rem;
+            color: #5A67D8;
+            font-weight: 500;
+        }
+
+        .btn-apply {
+            background-color: #5A67D8;
+            color: white;
+            padding: 0.6rem 1rem;
+            font-size: 1rem;
+            border-radius: 0.3rem;
+        }
+
+        .btn-apply:hover {
+            background-color: #4c5dc7;
+        }
+
+        @media (max-width: 768px) {
+            .search-bar {
+                padding: 1rem;
+            }
+
+            .job-card {
+                padding: 1rem;
+            }
+
+            .job-title {
+                font-size: 1.2rem;
+            }
+
+            .job-company {
+                font-size: 1rem;
+            }
+
+            .job-location {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">Smart Job Application Assistant</a>
+        </div>
+    </nav>
+
+    <!-- Search Bar -->
+    <div class="container search-bar">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search for jobs..." aria-label="Search">
+                    <button class="btn btn-search" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Job Listings -->
+    <div class="container">
+        <div class="row">
+            <!-- Job Card 1 -->
+            <div class="col-md-6">
+                <div class="job-card">
+                    <h3 class="job-title">Front-End Developer</h3>
+                    <p class="job-company">Google</p>
+                    <p class="job-location">Mountain View, CA</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#" class="btn btn-apply">Apply Now</a>
+                </div>
+            </div>
+
+            <!-- Job Card 2 -->
+            <div class="col-md-6">
+                <div class="job-card">
+                    <h3 class="job-title">Back-End Engineer</h3>
+                    <p class="job-company">Facebook</p>
+                    <p class="job-location">Menlo Park, CA</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#" class="btn btn-apply">Apply Now</a>
+                </div>
+            </div>
+
+            <!-- Job Card 3 -->
+            <div class="col-md-6">
+                <div class="job-card">
+                    <h3 class="job-title">UI/UX Designer</h3>
+                    <p class="job-company">Spotify</p>
+                    <p class="job-location">New York, NY</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#" class="btn btn-apply">Apply Now</a>
+                </div>
+            </div>
+
+            <!-- Job Card 4 -->
+            <div class="col-md-6">
+                <div class="job-card">
+                    <h3 class="job-title">Data Scientist</h3>
+                    <p class="job-company">Amazon</p>
+                    <p class="job-location">Seattle, WA</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#" class="btn btn-apply">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

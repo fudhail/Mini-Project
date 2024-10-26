@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Job Application Assistant - Login</title>
+    <!-- Bootstrap CSS -->
+    <link href="./INDEX2_files/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Font -->
+    <link rel="stylesheet" href="./INDEX2_files/css2">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f7fa;
+        }
+
+        .left-panel {
+            background-color: #5A67D8;
+            color: white;
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .right-panel {
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .logo-title {
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .logo-subtitle {
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        .login-header {
+            font-size: 2.5rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .login-subheader {
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin-bottom: 2rem;
+            color: #6c757d;
+        }
+
+        .btn-google {
+            background-color: #ffffff;
+            color: #444444;
+            border: 1px solid #ced4da;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 0.8rem;
+        }
+
+        .btn-google img {
+            width: 24px;
+            margin-right: 8px;
+        }
+
+        .form-control-lg {
+            padding: 1rem;
+            font-size: 1rem;
+            border: 1px solid #ced4da;
+            border-radius: 0.3rem;
+        }
+
+        .form-control:focus {
+            border-color: #5A67D8;
+            box-shadow: 0 0 5px rgba(90, 103, 216, 0.5);
+        }
+
+        .btn-login {
+            background-color: #5A67D8;
+            color: white;
+            font-size: 1.1rem;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 0.3rem;
+            transition: background-color 0.3s;
+        }
+
+        .btn-login:hover {
+            background-color: #4c5dc7;
+        }
+
+        .newbie-link {
+            margin-top: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .newbie-link a {
+            font-weight: 500;
+            color: #5A67D8;
+            text-decoration: none;
+        }
+
+        .newbie-link a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .left-panel {
+                height: auto;
+                padding: 2rem;
+                text-align: center;
+            }
+
+            .right-panel {
+                height: auto;
+                padding: 2rem;
+            }
+
+            .logo-title {
+                font-size: 2rem;
+            }
+
+            .login-header {
+                font-size: 2rem;
+            }
+        }
+
+        .cursor-pointer {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row vh-100">
+            <!-- Left panel -->
+            <div class="col-md-6 left-panel">
+                <div>
+                    <h1 class="logo-title">Smart Job Application Assistant</h1>
+                    <p class="logo-subtitle">Making lives easier</p>
+                </div>
+            </div>
+
+            <!-- Right panel -->
+            <div class="col-md-6 right-panel">
+                <div>
+                    <h2 class="login-header">Welcome Back 👋</h2>
+                    <p class="login-subheader">Log In to your Account</p>
+
+                    <!-- Google Login Button -->
+                    <button class="btn btn-google btn-lg mb-4 w-100 d-flex align-items-center justify-content-center">
+                        <img src="download.png" alt="Google">
+                        Log In with Google
+                    </button>
+
+                    <!-- Email Login Form -->
+                    <form>
+                        <div class="mb-3">
+                            <input type="email" class="form-control form-control-lg" placeholder="Email" required>
+                        </div>
+                        <div class="mb-3 position-relative">
+                            <input id="password" type="password" class="form-control form-control-lg" placeholder="Password" required>
+                            <span id="togglePassword" class="position-absolute top-50 end-0 translate-middle-y me-3 cursor-pointer">
+                                👁️
+                            </span>
+                        </div>
+                        <button type="submit" class="btn btn-login btn-lg w-100">Log In</button>
+                    </form>
+
+                    <!-- New User Sign Up Link -->
+                    <div class="text-center newbie-link">
+                        <p>Are you a Newbie? <a href="signup.html">Get Started - It's Free</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="./INDEX2_files/bootstrap.bundle.min.js"></script>
+
+    <!-- Password Toggle Script -->
+    <script>
+        const togglePassword = document.getElementById('togglePassword');
+        const password = document.getElementById('password');
+
+        togglePassword.addEventListener('click', function () {
+            // Toggle the type attribute using ternary operator
+            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+
+            // Toggle the icon (optional, if you want to change the icon)
+            this.textContent = type === 'password' ? '👁️' : '🙈';
+        });
+    </script>
+
+</body>
+
+</html>
